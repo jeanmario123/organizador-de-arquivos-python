@@ -1,6 +1,6 @@
-import os
-from pathlib import Path
-import shutil
+import os # Manipulação de recursos do sistema operacional (caminhos, variáveis de ambiente)
+from pathlib import Path # Manipulação de caminhos de arquivos e diretórios de forma orientada a objetos
+import shutil # Operações de alto nível em arquivos e pastas (copiar, mover, deletar)
 
 caminho = input("Digite o caminho do arquivo: ")
 
