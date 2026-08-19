@@ -5,27 +5,27 @@ import shutil # Operações de alto nível em arquivos e pastas (copiar, mover, 
 caminho = input("Digite o caminho do arquivo: ")
 
 caminho = caminho.replace('"', '')
-#substitui as aspas duplas por nada, caso o usuário tenha colocado aspas duplas no caminho
+# substitui as aspas duplas por nada, caso o usuário tenha colocado aspas duplas no caminho
 
 nome_pasta = input("Digite o nome da pasta: ")
 
 caminho_copiado = Path(caminho)
-#substitui a variável caminho por uma variável do tipo Path, que é mais fácil de trabalhar com arquivos e pastas
+# substitui a variável caminho por uma variável do tipo Path, que é mais fácil de trabalhar com arquivos e pastas
 
 pasta_destino_principal = caminho_copiado / nome_pasta
-#nome da pasta que será criada para organizar os arquivos
+# nome da pasta que será criada para organizar os arquivos
 
 while pasta_destino_principal.exists():
- #verifica se a pasta já existe, caso exista, pede para o usuário digitar outro nome   
+ # verifica se a pasta já existe, caso exista, pede para o usuário digitar outro nome   
     nome_pasta = input("A pasta já existe. Digite outro nome: ")
-    #substitui a variável nome_pasta por uma nova variável, que é o novo nome da pasta que o usuário digitou
+    # substitui a variável nome_pasta por uma nova variável, que é o novo nome da pasta que o usuário digitou
     
     pasta_destino_principal = caminho_copiado / nome_pasta
-    #substitui a variável pasta_destino_principal por uma nova variável, que é o novo caminho da
+    # substitui a variável pasta_destino_principal por uma nova variável, que é o novo caminho da
     # pasta que o usuário digitou
     
 pasta_destino_principal.mkdir(parents=True)
- #cria a pasta que o usuário digitou, caso ela não exista
+ # cria a pasta que o usuário digitou, caso ela não exista
  
 arquivos = {
     ".txt": "Textos",
